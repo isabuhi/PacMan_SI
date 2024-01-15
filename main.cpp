@@ -5,6 +5,7 @@
 
 #include "GL/glew.h"
 #include "GLFW/glfw3.h"
+#include <windows.h>
 
 
 static void SetGLFWMetadata ()
@@ -125,7 +126,7 @@ int main()
     glBindBuffer (GL_ARRAY_BUFFER, 0);
     glBindVertexArray (0);
 
-    glClearColor (0.2f, 0.2f, 0.45f, 1.0f);
+    glClearColor (0.6f, 0.2f, 0.45f, 1.0f);
 
     int width;
     int height;
@@ -133,9 +134,10 @@ int main()
         glfwPollEvents ();
 
         glClear (GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+        Sleep(4000);
 
         glfwGetFramebufferSize (window, &width, &height);
-        glViewport (0, 0, width, height);
+        glViewport (0  , 0, width, height);
 
         glUseProgram (shaderProgram);
         glBindVertexArray (VAO);

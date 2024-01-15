@@ -12,7 +12,7 @@ set(GLEW_INCLUDE_DIR "${PROJECT_SOURCE_DIR}/dependencies/glew/include")
 
 link_directories(${GLFW_LIBRARY_DIR} ${GLEW_LIBRARY_DIR})
 
-add_executable(PacMan_SI main.cpp )
+add_executable(PacMan_SI main.cpp)
 
 add_custom_command(TARGET PacMan_SI POST_BUILD
         COMMAND ${CMAKE_COMMAND} -E copy
